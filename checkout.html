@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <link rel="stylesheet" href="Styles/bootstrap.min.css" />
+        <link rel="custom stylesheet" href="Styles/custom.css" />
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <!-- Top Bar-->
+            <div class="topNavs">
+                <ul class="nav">
+                    <div class="TopContainer">
+                        <a href="#" id="loginlogout">Login</a>
+                        <img id="logoIMG" src="Images/f1-logo-black.png" />
+                        <div class="btn-toolbar" id="checkout-box-container">
+                            <a class="nav-item nav-link" href="#" id="checkout-box">
+                                <button id="checkout-button" type="button" class="btn btn-secondary ml-2"> Checkout <span class="badge badge-light" id="checkout"></span></button><button id="reset-button" class="btn btn-warning" onclick="ResetCart()">Reset</button>
+                            </a>
+                        </div>
+                    </div>
+                </ul>
+            </div>
+        </header>
+
+        <!-- Main Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="Index.html">Home<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Store.html">Store</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            History
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="60-80.html">1960 - 1980</a>
+                            <a class="dropdown-item" href="80-00.html">1980 - 2000</a>
+                            <a class="dropdown-item" href="00-20.html">2000 - 2020</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main onload="EmbedCheckoutDetails()">
+            <h1 class="display-4" style="color: #F4FFFD">Checkout</h1>
+            <h1 id="checkout-details" class="display-4"></h1>
+                <div class="row" style="max-width: 94vw;">    
+        <div style="min-width: 100vw;" class="col-sm col-md-4"> 
+          <form name="paymentdetails" id="pdetails" action="" method="get">
+                <fieldset style="max-width: 50vw; margin: 0 auto;" >
+                    <legend class="form-labels">Delivery Details</legend>
+                    <div class="form-group">
+                        <label for="getFirstName" class="form-labels">First name</label>
+                        <input type="text" class="form-control" id="getFirstName" name="firstname" value="firstname" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="getLastName" class="form-labels">Last name</label> 
+                        <input type="text" class="form-control" id="getLastName" name="lastname" value="surname" required>
+                    </div>    
+                    <div class="form-group">
+                        <label for="getAddress1" class="form-labels">Addresss</label> 
+                        <input type="text" class="form-control" id="getAddress1" name="address2" value="address 1" required>
+                    </div> 
+                    <div class="form-group">
+                        <label for="getAddress2" class="form-labels">Addresss</label> 
+                        <input type="text" class="form-control" id="getAddress2" name="address2"  value="address 2"  required>
+                    </div> 
+                        <div class="form-group">
+                        <label for="getAddress3" class="form-labels">Addresss</label> 
+                        <input type="text" class="form-control" id="getAddress3" name="address3"  value="address 3"  required>
+                    </div> 
+                </fieldset>    
+                <fieldset style="max-width: 50vw; margin: 0 auto;">
+                    <legend class="form-labels">Payment Details</legend>
+                    <div class="form-group">
+                        <label for="getCardName" class="form-labels">Card Name</label> 
+                        <input type="text" class="form-control" id="getCardName" name="cardname" value="MR FIRSTNAME SURNAME" required>
+                    </div>   
+                    <div class="form-group">
+                        <label for="getCardNumber" class="form-labels">Card Number</label> 
+                        <input type="text" class="form-control" id="getCardNumber" name="cardnumber" value="1234 5678 9102 3456" pattern="[0-9]{4}[\s][0-9]{4}[\s][0-9]{4}[\s][0-9]{4}" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="getCardCVC" class="form-labels">CVC</label> 
+                        <input style="width: 10vw" type="password" class="form-control" id="getCardNumber" name="cardnumber" pattern="[0-9]{3}" required>
+                    </div>
+                </fieldset>    
+                <div class="alert alert-success d-none" id="payment-success" role="alert">
+                    Thank you for your purchase. You will receive delivery details via email. Please return to our <a href="shop.html">Shopping Page</a>.
+                </div>
+                <div class="alert alert-danger d-none" id="payment-failure" role="alert">
+                  There seems to be a problem with the card details you entered.
+                </div>
+                <div class="alert alert-danger d-none" id="no-login-failure">You must be logged in to make a purchase, you can log in <a href="Login.html">here</a></div>
+                
+              <div class="container" style="width: 40vw">
+                  <input type='submit' class="btn btn-primary" id="buy-button" value="Buy Now" style="width: 100%; margin: 15px">
+              </div>
+              
+
+    
+            </form>
+
+
+        </div> 
+    </div> 
+        </main>
+
+        <!--Footer-->
+        <footer>
+            <div class="container-fluid" id="footerNav">
+                
+                <p id="CRText">Copyright 2020 Cormac McManus</p>
+            </div>
+        </footer>
+
+        <script src="Scripts/tether.js"></script>
+        <script src="Scripts/jquery-3.5.1.min.js"></script>
+        <script src="Scripts/bootstrap.min.js"></script>
+        <script src="Scripts/custom.js"></script>
+        
+    </body>
+</html>

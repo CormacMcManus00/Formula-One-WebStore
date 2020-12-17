@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <title>Registration Form Lab 5</title>
+  <!-- Bootstrap core CSS -->
+  <link href="Styles/bootstrap.min.css" rel="stylesheet">
+  <link href="Styles/custom.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+      <header>
+            <!-- Top Bar-->
+            <div class="topNavs">
+                <ul class="nav">
+                    <div class="TopContainer">
+                        <a href="#" id="loginlogout">Login</a>
+                        <img id="logoIMG" src="Images/f1-logo-black.png" />
+                        <div class="btn-toolbar" id="checkout-box-container">
+                            <a class="nav-item nav-link" href="Checkout.html" id="checkout-box">
+                                <button id="checkout-button" type="button" class="btn btn-secondary ml-2"> Checkout <span class="badge badge-light" id="checkout"></span> </button>
+                            </a>
+                        </div>
+                    </div>
+                </ul>
+            </div>
+        </header>
+    
+<main class="container"> 
+    <div class="row justify-content-center" style="min-height: 100vh;">    
+        <div class="col-sm col-md-4 align-self-center">
+            <div class="alert alert-danger d-none" role="alert" id="loginerror">The username or password you entered is incorrect. <a href="">Forgot your password?</a></div>    
+            <form name="login" action="" method="get" >
+                <div class="form-group">
+                    <label for="getEmail" style="color: #FDFFFC;">Email address</label>
+                    <input type="email" class="form-control" id="getEmail" name="email" value="wmitty@email.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="getPassword1" style="color: #FDFFFC">Password</label> 
+                    <input type="password" class="form-control" id="getPassword1" name="password" value="password1" required>
+                </div>    
+                <input type='submit' class="btn btn-dark" value="Login">
+            </form>
+            <p> <a href="#" style="color: #FF9F1C">Need to Register?</a></p>
+
+        </div> 
+    </div>
+    
+
+    
+</main>
+    <script src="Scripts/jquery-3.5.1.min.js"></script>
+    <script src="Scripts/bootstrap.bundle.min.js"></script> 
+    <script src="Scripts/custom.js"></script>   
+    
+</body>
+</html>
+
+
+

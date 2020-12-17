@@ -1,0 +1,192 @@
+/* Body */
+body{
+    background-color: #011627;
+}
+
+/*change color of certain bootstrap elements*/
+
+.btn-dark{
+    background-color: #011627 !important;
+    color: #FDFFFC !important;
+    border: 1px solid #FDFFFC;
+}
+
+/*Bar at top of page, including Cart, Login, Logo*/
+.TopContainer{
+    min-height: 8vh;
+    display: flex;
+    justify-content: space-between;
+    width: 95vw;
+    padding-left: 2.5vw;
+    height: 5vh;
+    
+}
+
+.topNavs {
+    background-color: #E71D36;
+}
+
+#logoIMG {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+#checkout-box-container{
+    display: flex;
+    align-items: center;
+}
+
+#checkout-box{
+    display: flex;
+    height: 75%;
+    align-items: center;
+}
+
+#checkout-button{
+    background-color: #011936;
+    color: #F4FFFD;
+}
+
+#CartCounter {
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    float: left;
+    font-size: 1.5em;
+    margin-top: 2vh;
+}
+
+#loginlogout {
+    font-family: 'Roboto', sans-serif;
+    color: #011936;
+    display: flex;
+    align-items: center
+}
+
+#loginlogout:hover {
+    color: #F4FFFD;
+    text-decoration: none;
+}
+
+
+/*Main Navigation*/
+ul li a {
+    font-family: 'Roboto', sans-serif;
+}
+
+.navbar-dark {
+    background-color: #E71D36 !important;
+}
+
+.navbar-dark .navbar-nav .nav-link{
+    color: #FDFFFC;
+}
+
+.dropdown-menu{
+    background-color: #E71D36;
+}
+
+.dropdown-menu .dropdown-item{
+    color: #FDFFFC;
+}
+
+.dropdown-menu .dropdown-item:hover{
+    color: black;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover{
+    color: black;
+    background-color: white;
+}
+
+/************************ INDEX PAGE ************************/
+
+/*Main Page Content*/
+/*Cards & their containers*/
+
+.home.card{
+    border: 3px solid #2EC4B6;
+    margin-top: 10px;
+    border-radius: 6px;
+    min-height: 80vh;
+    margin: 5px auto;
+    background-color: #E71D36;
+}
+
+.card-title{
+    font-family: 'Roboto', sans-serif;
+    color: #011627;
+}
+
+.cardList{
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.8em;
+    color: #FDFFFC;
+}
+
+
+/************************ STORE PAGE ************************/
+.store.card{
+    border: 3px solid #2EC4B6;
+    background-color: #E71D36;
+    color: white;
+    margin: 5px auto;
+}
+
+.store-card-title{
+    color: #FDFFFC;
+}
+
+
+
+/*Footer*/
+footer{
+    background-color: #E71D36;
+    display: flex;
+    height: 3vh;
+}
+
+#CRText{
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    text-align: center;
+    font-size: 1em;
+}
+/************************ HISTORY PAGES ************************/
+
+.display-4.article-title{
+    color: #FDFFFC;
+}
+
+.article-container{
+    border: 3px solid white;
+    margin: 10px;
+}
+
+.col.img-col{
+    min-width: 100%;
+}
+
+.article-img{
+    max-width: 100%
+}
+
+.col.text-col{
+    text-align: left; 
+    background-color: #FDFFFC;
+    padding: 10px;
+}
+
+/************************ CHECKOUT PAGE ************************/
+#reset-button{
+    
+}
+
+#checkout-details{
+    color: #F9DC5C;
+    font-size: 2em;
+}
+
+.form-labels{
+    color: #F4FFFD;
+}
