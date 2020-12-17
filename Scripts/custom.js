@@ -120,7 +120,7 @@ $(document).ready(function(){
         if (email=="samplemail@email.com" && password=="samplePasswordOne")  {   
             // successful login, user redirected to Index.html
             localStorage.setItem('loggedIn',1);    
-            window.location.href = "Index.html";  // redirect to shop page
+            window.location.href = "index.html";  // redirect to shop page
         }
         else {
             // login unsuccessful, error message appears
